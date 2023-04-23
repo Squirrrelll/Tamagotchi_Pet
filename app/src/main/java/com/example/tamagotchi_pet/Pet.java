@@ -61,10 +61,10 @@ public class Pet {
         food = 61;
         water = 61;
         happy = 61;
-        sleep=61;
+        sleep= 61;
         death = 0;
-        empty =0;
-        wantfood =false;
+        empty = 0;
+        wantfood = false;
         wantwater = false;
         wantbehappy = false;
         wantsleep = false;
