@@ -2,12 +2,69 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation_fragment">
-
+    android:id="@+id/navigation_fragment"
+    app:startDestination="@id/StartFragment">
     <fragment
         android:id="@+id/StartFragment"
         android:name="com.example.tamagotchi_pet.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_StartFragment_to_ChoiceFragment"
+            app:destination="@id/ChoiceFragment" />
+        <action
+            android:id="@+id/action_StartFragment_to_HelpFragment"
+            app:destination="@id/HelpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ChoiceFragment"
+        android:name="com.example.tamagotchi_pet.ChoiceFragment"
+        android:label="fragment_choice"
+        tools:layout="@layout/fragment_choice" >
+        <action
+            android:id="@+id/action_ChoiceFragment_to_StartFragment"
+            app:destination="@id/StartFragment" />
+        <action
+            android:id="@+id/action_ChoiceFragment_to_NameFragment"
+            app:destination="@id/NameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GameFragment"
+        android:name="com.example.tamagotchi_pet.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_GameFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/HelpFragment"
+        android:name="com.example.tamagotchi_pet.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" >
+        <action
+            android:id="@+id/action_HelpFragment_to_StartFragment"
+            app:destination="@id/StartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.example.tamagotchi_pet.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_MainFragment_to_GameFragment"
+            app:destination="@id/GameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/NameFragment"
+        android:name="com.example.tamagotchi_pet.NameFragment"
+        android:label="fragment_name"
+        tools:layout="@layout/fragment_name" >
+        <action
+            android:id="@+id/action_NameFragment_to_ChoiceFragment"
+            app:destination="@id/ChoiceFragment" />
+        <action
+            android:id="@+id/action_NameFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
     </fragment>
 </navigation>
